@@ -3,6 +3,8 @@ import "../styles/global.css";
 import Navbar from "../components/navbar.tsx";
 import { SEO } from "astro-seo";
 ---
+<html>
+  <head> 
 <SEO
   title="Cherry Creek Computer Science Honor Society"
   description="The official website of the Cherry Creek Computer Science Honor Society. Join us in fostering excellence in computer science education and innovation."
@@ -11,7 +13,7 @@ import { SEO } from "astro-seo";
     basic: {
       title: "Cherry Creek Computer Science Honor Society",
       type: "website",
-      image: "https://creekcshs.org/og-image.png",
+      image: "/og-image.png",
       url: "https://creekcshs.org",
     },
     optional: {
@@ -51,7 +53,7 @@ import { SEO } from "astro-seo";
     link: [{ rel: "icon", href: "/favicon.ico" }],
   }}
 />
-    // ... rest of <head>
+   <head>
   </head>
     <body>
 <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] pt-3">
