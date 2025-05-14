@@ -1,0 +1,100 @@
+---
+import { Button } from "@/components/ui/button";
+import { Image } from "astro:assets";
+---
+
+<section class="py-12 sm:py-16 md:py-20 w-full bg-background">
+  <div class="container px-4 mx-auto max-w-6xl">
+    <div class="mb-8 md:mb-12">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">Projects</h2>
+      <div class="mt-3 md:mt-4 h-1 w-16 md:w-20 bg-primary rounded-full"></div>
+    </div>
+
+    <!-- Bento Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <!-- Project 1 -->
+      <div class="flex flex-col space-y-6 md:space-y-8">
+        <!-- Project 1 Main Card -->
+        <div class="relative overflow-hidden rounded-lg border border-border bg-card shadow-sm">
+          <div class="relative aspect-video w-full overflow-hidden">
+            <Image
+              src="/placeholder.svg?height=400&width=600"
+              alt="AI Study Assistant"
+              width={600}
+              height={400}
+              class="object-cover"
+            />
+          </div>
+          <div class="p-4 sm:p-6">
+            <h3 class="text-xl sm:text-2xl font-bold">Open Course Ware</h3>
+            <p class="mt-2 text-sm sm:text-base text-muted-foreground">
+              A website with the goal of providing a platform for students to learn and grow in their skills and knowledge. Hosts specific notes, flashcard, and resources specific for Cherry Creek High School. Includes AI Features like an interactive LLM.
+            </p>
+            <div class="mt-4">
+              <Button variant="outline" size="sm" client:load>
+                <a href="https://www.creekocw.com/">
+                Learn More
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 1 Secondary Card -->
+        <div class="relative overflow-hidden rounded-lg border border-border bg-card/50 shadow-sm">
+          <div class="p-4 sm:p-6">
+            <h4 class="text-base sm:text-lg font-semibold">Technologies Used</h4>
+            <div class="mt-3 flex flex-wrap gap-2">
+              {["Python", "TensorFlow", "React", "NextJS", "Typescript", "Postgres"].map((tech) => (
+                <span
+                  class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="flex flex-col space-y-6 md:space-y-8">
+        <!-- Project 2 Secondary Card -->
+
+        <div class="relative overflow-hidden rounded-lg border border-border bg-card/50 shadow-sm">
+          <div class="p-4 sm:p-6">
+            <h4 class="text-base sm:text-lg font-semibold">Technologies Used</h4>
+            <div class="mt-3 flex flex-wrap gap-2">
+              {["React", "Astro", "Typescript", "HTML", "CSS", "Tailwind"].map((tech) => (
+                <span
+                  class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 Main Card -->
+        <div class="relative overflow-hidden rounded-lg border border-border bg-card shadow-sm">
+          <div class="relative aspect-video w-full overflow-hidden">
+            <Image
+              src="/placeholder.svg?height=400&width=600"
+              alt="Community Code Editor"
+              width={600}
+              height={400}
+              class="object-cover"
+            />
+          </div>
+          <div class="p-4 sm:p-6">
+            <h3 class="text-xl sm:text-2xl font-bold">Club Websites</h3>
+            <p class="mt-2 text-sm sm:text-base text-muted-foreground">
+              We build websites for our clubs at Cherry Creek High School, fully free, and optimized for SEO and accessibility.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

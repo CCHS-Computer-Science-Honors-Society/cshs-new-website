@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets"
+---
+
+<section class="py-12 sm:py-16 md:py-20 w-full bg-background">
+  <div class="container px-4 mx-auto max-w-6xl">
+    <div class="mb-8 md:mb-12">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">About Us</h2>
+      <div class="mt-3 md:mt-4 h-1 w-16 md:w-20 bg-primary rounded-full"></div>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12">
+      <div class="w-full md:w-1/2 space-y-4 sm:space-y-6">
+        <p class="text-base sm:text-lg text-muted-foreground">
+          The Computer Science Honor Society is dedicated to promoting excellence and recognizing outstanding
+          achievements in the field of computer science among students.
+        </p>
+        <p class="text-base sm:text-lg text-muted-foreground">
+          Founded with the mission to foster academic growth and professional development, our society provides
+          members with opportunities for leadership, community service, and collaborative projects that advance
+          their skills and knowledge.
+        </p>
+        <p class="text-base sm:text-lg text-muted-foreground">
+          As a club our primary focus is on building projects that serve the community, competing in events are challenging and fun, and providing a platform for students to showcase their skills and knowledge.
+        </p>
+      </div>
+
+      <div class="w-full md:w-1/2 mt-8 md:mt-0">
+        <div class="aspect-square w-full max-w-sm sm:max-w-md mx-auto relative overflow-hidden rounded-lg shadow-lg border border-border">
+          <Image
+            src={"https://moltmqa28u.ufs.sh/f/0q2U2s5hTRxUdlycFW7f4pShDQPscOarjul8Iy0ECoYVm1M3"}
+            alt="Computer Science Honor Society members"
+            width={600}
+            height={600}
+            class="object-cover w-full h-full"
+            loading="lazy"
+          />
+          <div class="absolute -bottom-6 -left-6 w-16 sm:w-24 h-16 sm:h-24 bg-primary/10 rounded-full z-0"></div>
+          <div class="absolute -top-6 -right-6 w-12 sm:w-16 h-12 sm:h-16 border border-primary/30 rounded-full z-0"></div>
+        </div>
+        <div class="mt-3 md:mt-4 text-xs sm:text-sm text-center md:text-left text-muted-foreground">
+          Our community of students 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

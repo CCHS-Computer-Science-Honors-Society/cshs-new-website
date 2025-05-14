@@ -1,0 +1,45 @@
+---
+import { LucideCode, LucideChevronRight } from "@lucide/astro"
+import { Button } from "@/components/ui/button"
+---
+
+<section class="relative min-h-[80vh] w-full overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/generated-image-NAT7vk9ThEI9S9XmIdPKvi28n2k20K.png"
+      alt="Computer science pattern background"
+      class="object-cover w-full h-full absolute inset-0 opacity-10"
+      loading="eager"
+      style="object-fit: cover;"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-background/90"></div>
+  </div>
+
+  <div class="relative z-10 flex min-h-[80vh] w-full flex-col items-center justify-center px-4 py-20 text-center">
+    <div class="inline-flex items-center justify-center rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-6">
+      <LucideCode class="mr-2 h-4 w-4" />
+      <span>Excellence in Computing</span>
+    </div>
+    <h1 class="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+      Computer Science <br />
+      <span class="bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">
+        Honor Society
+      </span>
+    </h1>
+    <p class="mb-8 max-w-2xl text-lg text-muted-foreground sm:text-xl">
+      Recognizing excellence and promoting leadership in the field of computer science through academic achievement,
+      service, and innovative thinking.
+    </p>
+    <div class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+      <Button size="lg" className="gap-2">
+        Join Us
+        <LucideChevronRight class="h-4 w-4" />
+      </Button>
+      <Button size="lg" variant="outline">
+        Learn More
+      </Button>
+    </div>
+  </div>
+
+  <div class="absolute bottom-20 right-10 hidden h-16 w-16 rounded-full bg-primary/5 lg:block"></div>
+</section>

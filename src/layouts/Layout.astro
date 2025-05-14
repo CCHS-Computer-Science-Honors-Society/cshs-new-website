@@ -1,0 +1,11 @@
+---
+import "./src/styles/global.css";
+import Navbar from "../components/navbar.tsx";
+---
+
+<div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] pt-3">
+
+<Navbar client:load />
+
+   <slot /> 
+</div>
