@@ -10,7 +10,7 @@ import { BookOpen, Ear, GraduationCap, School, ShieldX } from "lucide-react";
 
 export function Apply() {
 	return (
-		<section className="py-12 sm:py-16 md:py-20 w-full bg-background">
+		<section id="apply" className="py-12 sm:py-16 md:py-20 w-full bg-background">
 			<div className="container px-4 mx-auto max-w-6xl">
 				<div className="mb-8 md:mb-12">
 					<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">

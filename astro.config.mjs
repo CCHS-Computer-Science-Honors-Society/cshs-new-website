@@ -10,6 +10,14 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), sitemap()],
+  image: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'hebbkx1anhila5yf.public.blob.vercel-storage.com'
+      }
+    ]
+  },
 
   vite: {
     plugins: [tailwindcss()]

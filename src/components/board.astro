@@ -1,0 +1,88 @@
+---
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
+
+type BoardMember = {
+	name: string;
+	role: string;
+	bio?: string;
+	image?: string;
+};
+
+const boardMembers: BoardMember[] = [
+{ 
+  name: "Paul Lein", 
+  role: "Sponsor", 
+  bio: "Provides guidance and support for the club’s growth." 
+},
+{ 
+  name: "Ani Chenjeri", 
+  role: "President", 
+  bio: "Leads the club and drives all major initiatives." 
+},
+{ 
+  name: "Rishabh Sodani", 
+  role: "Vice President", 
+  bio: "Helps manage operations and events." 
+},
+{ 
+  name: "Kartikey Mishra", 
+  role: "Marketing", 
+  bio: "Promotes the club and its activities." 
+},
+{ 
+  name: "Andrew Doyle", 
+  role: "Marketing", 
+  bio: "Supports outreach and communications." 
+},
+{ 
+  name: "Vikram Raju", 
+  role: "Treasurer", 
+  bio: "Oversees finances and resources." 
+},
+{ 
+  name: "Ani Gadepalli", 
+  role: "Competitive Programming", 
+  bio: "Leads coding challenges and practice." 
+}
+];
+---
+<section id="board" class="py-12 sm:py-16 md:py-20 w-full bg-background">
+	<div class="container px-4 mx-auto max-w-6xl">
+		<div class="mb-8 md:mb-12">
+			<h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">Board</h2>
+			<div class="mt-3 md:mt-4 h-1 w-16 md:w-20 bg-primary rounded-full"></div>
+		</div>
+
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+			{boardMembers.map((member) => (
+				<Card className="overflow-hidden">
+					<div class="flex items-center gap-4 px-6 pt-6">
+						{member.image ? (
+							<img src={member.image} alt={member.name} class="h-14 w-14 rounded-full object-cover border border-border" loading="lazy" />
+						) : (
+							<div class="h-14 w-14 rounded-full bg-primary/10 text-primary flex items-center justify-center border border-border">
+								<span class="font-semibold">
+									{member.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+								</span>
+							</div>
+						)}
+						<div class="min-w-0">
+							<CardTitle className="text-base sm:text-lg">{member.name}</CardTitle>
+							<div class="mt-1">
+								<Badge variant="secondary">{member.role}</Badge>
+							</div>
+						</div>
+					</div>
+					{member.bio && (
+						<CardContent className="mt-2">
+							<p class="text-sm text-muted-foreground">{member.bio}</p>
+						</CardContent>
+					)}
+				</Card>
+			))}
+		</div>
+	</div>
+</section>
+
+

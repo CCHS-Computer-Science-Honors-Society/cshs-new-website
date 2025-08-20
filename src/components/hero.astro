@@ -1,16 +1,19 @@
 ---
+import { Image } from 'astro:assets';
 import { LucideCode, LucideChevronRight } from "@lucide/astro"
 import { Button } from "@/components/ui/button"
 ---
 
-<section class="relative min-h-[80vh] w-full overflow-hidden">
+<section id="home" class="relative min-h-[80vh] w-full overflow-hidden">
   <div class="absolute inset-0 z-0">
-    <img
+    <Image
       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/generated-image-NAT7vk9ThEI9S9XmIdPKvi28n2k20K.png"
       alt="Computer science pattern background"
       class="object-cover w-full h-full absolute inset-0 opacity-10"
       loading="eager"
       style="object-fit: cover;"
+      width={1920}
+      height={1080}
     />
     <div class="absolute inset-0 bg-gradient-to-b from-transparent to-background/90"></div>
   </div>

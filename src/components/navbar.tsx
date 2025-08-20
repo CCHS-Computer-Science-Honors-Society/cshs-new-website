@@ -15,10 +15,11 @@ function NavHeader() {
 			className="relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1"
 			onMouseLeave={() => setPosition((pv) => ({ ...pv, opacity: 0 }))}
 		>
-			<Tab setPosition={setPosition}>Home</Tab>
-			<Tab setPosition={setPosition}>About</Tab>
-			<Tab setPosition={setPosition}>Projects</Tab>
-			<Tab setPosition={setPosition}>Contact</Tab>
+			<Tab href="#home" setPosition={setPosition}>Home</Tab>
+			<Tab href="#about" setPosition={setPosition}>About</Tab>
+			<Tab href="#projects" setPosition={setPosition}>Projects</Tab>
+			<Tab href="#board" setPosition={setPosition}>Board</Tab>
+			<Tab href="#apply" setPosition={setPosition}>Contact</Tab>
 
 			<Cursor position={position} />
 		</ul>
@@ -27,9 +28,11 @@ function NavHeader() {
 
 const Tab = ({
 	children,
+	href,
 	setPosition,
 }: {
 	children: React.ReactNode;
+	href: string;
 	setPosition: any;
 }) => {
 	const ref = useRef<HTMLLIElement>(null);
@@ -48,7 +51,9 @@ const Tab = ({
 			}}
 			className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
 		>
-			{children}
+			<a href={href} className="block h-full w-full">
+				{children}
+			</a>
 		</li>
 	);
 };
