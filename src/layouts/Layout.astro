@@ -3,67 +3,67 @@ import "../styles/global.css";
 import Navbar from "../components/navbar.tsx";
 import { SEO } from "astro-seo";
 ---
-<html class="scroll-smooth">
-  <head> 
-<SEO
-  title="Cherry Creek Computer Science Honor Society"
-  description="The official website of the Cherry Creek Computer Science Honor Society. Join us in fostering excellence in computer science education and innovation."
-  canonical="https://creekcshs.org/"
-  openGraph={{
-    basic: {
-      title: "Cherry Creek Computer Science Honor Society",
-      type: "website",
-      image: "/og-image.png",
-      url: "https://creekcshs.org",
-    },
-    optional: {
-      description:
-        "Fostering excellence in computer science education and innovation at Cherry Creek High School",
-      locale: "en_US",
-      siteName: "Cherry Creek CS Honor Society",
-    },
-    image: {
-      width: 1200,
-      height: 630,
-      alt: "Cherry Creek Computer Science Honor Society logo",
-    },
-  }}
-  twitter={{
-    card: "summary_large_image",
-    title: "Cherry Creek Computer Science Honor Society",
-    description:
-      "Fostering excellence in computer science education and innovation at Cherry Creek High School",
-    image: "https://creekcshs.org/og-image.png",
-    creator: "@creekcshs",
-  }}
-  languageAlternates={[
-    {
-      href: "https://cchs-cs-honor-society.edu",
-      hrefLang: "en-US",
-    },
-  ]}
-  extend={{
-    meta: [
-      {
-        name: "keywords",
-        content:
-          "Computer Science, Honor Society, Cherry Creek, STEM, Education, Technology, Coding, Programming, AI, Creek CS, High School",
-      },
-    ],
-    link: [{ rel: "icon", href: "/favicon.ico" }],
-  }}
-/>
-   <head>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <SEO
+      title="Cherry Creek Computer Science Honor Society"
+      description="The official website of the Cherry Creek Computer Science Honor Society. Join us in fostering excellence in computer science education and innovation."
+      canonical="https://creekcshs.org/"
+      openGraph={{
+        basic: {
+          title: "Cherry Creek Computer Science Honor Society",
+          type: "website",
+          image: "/og-image.png",
+          url: "https://creekcshs.org",
+        },
+        optional: {
+          description:
+            "Fostering excellence in computer science education and innovation at Cherry Creek High School",
+          locale: "en_US",
+          siteName: "Cherry Creek CS Honor Society",
+        },
+        image: {
+          width: 1200,
+          height: 630,
+          alt: "Cherry Creek Computer Science Honor Society logo",
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        title: "Cherry Creek Computer Science Honor Society",
+        description:
+          "Fostering excellence in computer science education and innovation at Cherry Creek High School",
+        image: "https://creekcshs.org/og-image.png",
+        creator: "@creekcshs",
+      }}
+      languageAlternates={[
+        {
+          href: "https://cchs-cs-honor-society.edu",
+          hrefLang: "en-US",
+        },
+      ]}
+      extend={{
+        meta: [
+          {
+            name: "keywords",
+            content:
+              "Computer Science, Honor Society, Cherry Creek, STEM, Education, Technology, Coding, Programming, AI, Creek CS, High School",
+          },
+        ],
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+      }}
+    />
   </head>
-    <body>
-<div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] pt-3">
-
-<Navbar client:load />
-
-   <slot /> 
-</div>
-
-
-
-</body>
+  <body class="min-h-dvh bg-white text-foreground antialiased">
+    <div class="relative z-0 min-h-dvh w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
+      <div class="mx-auto w-full max-w-none px-0 pt-3">
+        <Navbar client:load />
+        <main>
+          <slot />
+        </main>
+      </div>
+    </div>
+  </body>
 </html>
