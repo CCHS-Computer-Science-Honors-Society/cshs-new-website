@@ -1,0 +1,97 @@
+---
+import { CalendarDays, Clock, MapPin } from "@lucide/astro";
+import {
+	Card,
+	CardContent,
+	CardDescription,
+	CardHeader,
+	CardTitle,
+} from "@/components/ui/card";
+import Layout from "@/layouts/Layout.astro";
+import { Button } from "@/components/ui/button";
+---
+
+<Layout title="Interest Meetings" >
+    <div class="min-h-screen ">
+      <section class="py-16 ">
+        <div class="container mx-auto px-4 text-center">
+          <h1 class="text-4xl font-bold mb-4 text-foreground">CSHS Interest Meetings</h1>
+          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Join us at either meeting to learn about our club and get involved!
+          </p>
+        </div>
+      </section>
+
+      {/* Meeting Details Section */}
+      <section class="py-8 ">
+        <div class="container mx-auto px-4">
+          <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Meeting 1 */}
+            <Card className="border hover:border-primary/50 transition-colors">
+              <CardHeader className="text-center pb-4">
+                <CardTitle className="text-foreground text-2xl flex items-center justify-center gap-2">
+                  <CalendarDays class="h-6 w-6" />
+                  Meeting #1
+                </CardTitle>
+                <CardDescription className="text-lg">After School Session</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div class="flex items-center gap-3 text-lg">
+                  <CalendarDays class="h-5 w-5 text-muted-foreground" />
+                  <span class="font-semibold">Tuesday, September 3rd</span>
+                </div>
+                <div class="flex items-center gap-3 text-lg">
+                  <Clock class="h-5 w-5 text-muted-foreground" />
+                  <span>After School</span>
+                </div>
+                <div class="flex items-center gap-3 text-lg">
+                  <MapPin class="h-5 w-5 text-muted-foreground" />
+                  <span>Math Science Resource Center</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Meeting 2 */}
+            <Card className="border hover:border-primary/50 transition-colors">
+              <CardHeader className="text-center pb-4">
+                <CardTitle className="text-foreground text-2xl flex items-center justify-center gap-2">
+                  <CalendarDays class="h-6 w-6" />
+                  Meeting #2
+                </CardTitle>
+                <CardDescription className="text-lg">Early Morning Session</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div class="flex items-center gap-3 text-lg">
+                  <CalendarDays class="h-5 w-5 text-muted-foreground" />
+                  <span class="font-semibold">Wednesday, September 4th</span>
+                </div>
+                <div class="flex items-center gap-3 text-lg">
+                  <Clock class="h-5 w-5 text-muted-foreground" />
+                  <span>7:45 AM</span>
+                </div>
+                <div class="flex items-center gap-3 text-lg">
+                  <MapPin class="h-5 w-5 text-muted-foreground" />
+                  <span>Room W431</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-12 ">
+        <div class="container mx-auto px-4 text-center">
+          <h3 class="text-2xl font-bold mb-4 text-foreground">Want to learn more?</h3>
+          <p class="text-muted-foreground mb-6">
+          <Button variant={"ghost"}>
+        <a href="/" class="text-primary hover:underline">
+            Check out the rest of the website 
+
+            </a>
+          </Button>
+          </p>
+          <p class="text-sm text-muted-foreground">We look forward to seeing you at one of our meetings!</p>
+        </div>
+      </section>
+    </div>
+</Layout>
