@@ -12,13 +12,14 @@ function NavHeader() {
 
 	return (
 		<ul
-			className="relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1"
+			className="relative mx-auto flex max-w-full overflow-x-auto rounded-full border-2 border-black bg-white p-1 sm:w-fit"
 			onMouseLeave={() => setPosition((pv) => ({ ...pv, opacity: 0 }))}
 		>
 			<Tab href="#home" setPosition={setPosition}>Home</Tab>
 			<Tab href="#about" setPosition={setPosition}>About</Tab>
 			<Tab href="#projects" setPosition={setPosition}>Projects</Tab>
 			<Tab href="#board" setPosition={setPosition}>Board</Tab>
+			<Tab href="#meetings" setPosition={setPosition}>Meetings</Tab>
 			<Tab href="#apply" setPosition={setPosition}>Contact</Tab>
 
 			<Cursor position={position} />
@@ -49,7 +50,7 @@ const Tab = ({
 					left: ref.current.offsetLeft,
 				});
 			}}
-			className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
+			className="relative z-10 block cursor-pointer whitespace-nowrap px-3 py-1.5 text-xs uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
 		>
 			<a href={href} className="block h-full w-full">
 				{children}
